@@ -27,7 +27,7 @@
   <body>
     <nav class="bg-white border-gray-200">
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pt-2 px-2"
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pt-2 px-10"
       >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="./asstes/logo-2.png" class="w-64" alt="Ajwan Logo" />
@@ -186,7 +186,7 @@
         </div>
       </div>
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2"
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-10"
       >
         <button
           id="dropdownHoverButton"
@@ -231,51 +231,64 @@
         <!-- Dropdown menu start -->
         <div
           id="dropdownHover"
-          class="z-10 hidden w-64 bg-white divide-y !-top-3 divide-gray-100 shadow"
+          class="z-10 w-64 bg-white divide-y !-top-[10px] divide-gray-100 shadow block"
         >
-          <ul
-            class="py-2 text-sm text-gray-700"
-            aria-labelledby="dropdownHoverButton"
-          >
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 -600"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 -600"
-                >Clothing</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 -600"
-                >Winter Collection</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 -600"
-                >Combo Offers</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 -600"
-                >Attar</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 -600"
-                >Dawah Canvas</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 -600"
-                >Gadgets</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Others</a>
-            </li>
-          </ul>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+              >Home</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+              >Clothing</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+              >Winter Collection</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+              >Combo Offers</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+              >Attar</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+              >Dawah Canvas</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+              >Gadgets</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
+              >Others</a
+            >
+          </div>
         </div>
         <!-- Dropdown menu end -->
 
@@ -283,6 +296,45 @@
         <div class="ms-5 flex-1 font-semibold text-[#0F0F0F]">Home</div>
       </div>
     </nav>
+    <!-- navbar end here  -->
+    <!-- Banner section start here  -->
+    <div class="px-[120px] flex gap-5 h-96">
+      <div class="h-40 flex-[1]"></div>
+      <div class="h-40 pt-4 me-auto flex-[3.6]">
+        <img class="" src="./asstes/banner.png" alt="" />
+      </div>
+    </div>
+    <!-- Banner section end here  -->
+
+    <!-- New Collection section  start -->
+    <section class="py-16 px-[120px]">
+      <nav class="flex space-x-6">
+        <a
+        class="py-1 hover:transition-all hover:underline:ease-in-out px-1 inline-flex items-center gap-2 border-b-2 hover:border-[#DBA203] text-sm whitespace-nowrap text-[#333333B3] font-semibold hover:text-[#333333] focus:outline-none focus:text-[#333333]"
+        href="#"
+        >
+        <!-- when this link is active new_collection_carts will -->
+          NEW
+        </a>
+        <a
+          class="py-1 hover:transition-all hover:underline:ease-in-out px-1 inline-flex items-center gap-2 border-b-2 hover:border-[#DBA203] text-sm whitespace-nowrap text-[#333333B3] font-semibold hover:text-[#333333] focus:outline-none focus:text-[#333333]"
+          href="#"
+          aria-current="page"
+        >
+          TOP
+        </a>
+        <a
+          class="py-1 hover:transition-all hover:underline:ease-in-out px-1 inline-flex items-center gap-2 border-b-2 hover:border-[#DBA203] text-sm whitespace-nowrap text-[#333333B3] font-semibold hover:text-[#333333] focus:outline-none focus:text-[#333333]"
+          href="#"
+          >🔥WINTER OFFER
+        </a>
+      </nav>
+      <div class="new_collection_carts">
+
+      </div>
+
+    </section>
+    <!--New Collection section  end -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
