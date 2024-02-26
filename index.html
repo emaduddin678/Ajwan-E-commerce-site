@@ -31,8 +31,12 @@
       <div
         class="max-w-screen-xl hidden xl:flex flex-wrap items-center justify-between mx-auto py-6 px-10"
       >
-        <a href="#" class="flex items-center space-x-3 ">
-          <img src="./asstes/logo-2.png" class="max-w-[280px]" alt="Ajwan Logo" />
+        <a href="#" class="flex items-center space-x-3">
+          <img
+            src="./asstes/logo-2.png"
+            class="max-w-[280px]"
+            alt="Ajwan Logo"
+          />
         </a>
         <div class="flex flex-1 mx-4">
           <button
@@ -116,7 +120,6 @@
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-search"
         >
-          
           <ul
             class="flex items-center flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
           >
@@ -212,6 +215,7 @@
           id="dropdownHover"
           class="z-10 w-64 bg-white divide-y !-top-[10px] divide-gray-100 shadow block"
         >
+          asdfs
           <div>
             <a
               href="#"
@@ -399,16 +403,23 @@
         <div
           class="max-w-screen-xl flex items-center justify-between mx-auto lg:p-4 px-2"
         >
-          <div class="navbar_collapse_btn">
+          <div
+            data-drawer-target="drawer-navigation"
+            data-drawer-show="drawer-navigation"
+            aria-controls="drawer-navigation"
+            class="navbar_collapse_btn cursor-pointer"
+          >
+            <!-- bg-rose-900 -->
             <svg
               class="w-5 h-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
+              stroke="#333333"
               viewBox="0 0 17 14"
             >
               <path
-                stroke="currentColor"
+                stroke="#333333"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
@@ -490,14 +501,244 @@
       <!-- main navbar is  bottom -->
     </nav>
     <!-- navbar end here  -->
+
     <!-- Banner section start here  -->
-    <div class="xl:px-[120px] px-12 lg:pt-[155px] md:pt-[115px] xl:pt-0 flex gap-5 ">
+    <div
+      class="xl:px-[120px] md:px-12 px-4 lg:pt-[155px] md:pt-[115px] xl:pt-0 pt-[140px] flex gap-5"
+    >
       <div class="hidden md:block flex-[1]"></div>
-      <div class=" me-auto flex-[3.6]">
+      <div class="me-auto flex-[3.6]">
         <img class="" src="./asstes/banner.png" alt="" />
       </div>
     </div>
     <!-- Banner section end here  -->
+
+    <!-- sidebar start  -->
+    <!-- drawer component -->
+    <div
+      id="drawer-navigation"
+      class="fixed top-0 left-0 z-40 w-64 h-screen overflow-y-auto transition-transform -translate-x-full bg-white"
+      tabindex="-1"
+      aria-labelledby="drawer-navigation-label"
+    >
+      <h5
+        id="drawer-navigation-label"
+        class="p-4 pb-0 text-base font-semibold text-gray-500 uppercase"
+      >
+        Menu
+      </h5>
+      <button
+        type="button"
+        data-drawer-hide="drawer-navigation"
+        aria-controls="drawer-navigation"
+        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+      <div class="py-2 overflow-y-auto ">
+        <ul class="space-y-2 font-medium drawerlim">
+          <li>
+            <!-- Search box for sidebar -->
+            <div class="relative  block w-full">
+              <div
+                class="absolute inset-y-0 end-6 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-4 text-sm text-gray-900 focus:border-gray-300 border border-gray-300 rounded-sm bg-gray-50 focus:ring-gray-300"
+                placeholder="Search..."
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-lg hover:bg-gray-100"
+                >Home</a
+              >
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <button
+                id="sidebarClothingBtnId"
+                data-dropdown-trigger="hover"
+                data-dropdown-toggle="sidebarClothingBtnToggle"
+                data-dropdown-placement="right-start"
+                data-dropdown-offset-distance="0"
+                data-dropdown-offset-skidding="0"
+                type="button"
+                class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
+              >
+                Clothing
+                <svg
+                  class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <button
+                id="doubleDropdownButtonHoverWinterCollection"
+                data-dropdown-trigger="hover"
+                data-dropdown-toggle="doubleDropdownWinterCollection"
+                data-dropdown-placement="right-start"
+                data-dropdown-offset-distance="0"
+                data-dropdown-offset-skidding="0"
+                type="button"
+                class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
+              >
+                Winter Collection
+                <svg
+                  class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+              </button>
+              <div
+                id="doubleDropdownWinterCollection"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700"
+                  aria-labelledby="doubleDropdownButtonHoverWinterCollection"
+                >
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                      >Panjabi</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                      >Dawah Jersey</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                      >Polo Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                      >T-shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                      >Borka</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+                >Combo Offers</a
+              >
+            </div>
+          </li>
+          <!-- asdfs -->
+          <li>
+            <div>
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+                >Attar</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+                >Dawah Canvas</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+                >Gadgets</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
+                >Others</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- sidebar end  -->
 
     <!-- New Collection section  start -->
     <section class="xl:pt-20 xl:px-28 mt-28">
@@ -537,8 +778,7 @@
       </h4>
       <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          class="flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-          style="width: 15%"
+          class="w-[44%] md:w-[25%] lg:w-[18%] xl:w-[14%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
         ></div>
       </div>
       <!-- End Multiple bars Progress -->
@@ -766,7 +1006,7 @@
           />
           <div class="flex flex-col justify-between space-y-8">
             <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-semibold text-[#333333]">
+              <h2 class="text-sm tracki font-medium text-[#333333]">
                 Black Double Part Jacket – Palestine Arabic
               </h2>
 
@@ -872,15 +1112,14 @@
       </h4>
       <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          class="flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-          style="width: 25%"
+          class="xl:w-[22%] lg:w-[27%] md:w-[36%] w-[68%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
         ></div>
       </div>
       <!-- End Multiple bars Progress -->
 
       <!-- hoodie Sales cards start here  -->
       <div
-        class="all_cards mt-4 justify-between grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5"
+        class="all_cards mt-4 justify-between grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5"
       >
         <!-- single start    -->
         <div
@@ -1101,7 +1340,7 @@
           />
           <div class="flex flex-col justify-between space-y-8">
             <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-semibold text-[#333333]">
+              <h2 class="text-sm tracki font-medium text-[#333333]">
                 Black Double Part Jacket – Palestine Arabic
               </h2>
 
@@ -1206,8 +1445,7 @@
       </h4>
       <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          class="flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-          style="width: 22%"
+          class="w-[60%] md:w-[32%] lg:w-[24%] xl:w-[19%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
         ></div>
       </div>
       <!-- End Multiple bars Progress -->
@@ -1435,7 +1673,7 @@
           />
           <div class="flex flex-col justify-between space-y-8">
             <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-semibold text-[#333333]">
+              <h2 class="text-sm tracki font-medium text-[#333333]">
                 Black Double Part Jacket – Palestine Arabic
               </h2>
 
@@ -1540,8 +1778,7 @@
       </h4>
       <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          class="flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-          style="width: 17%"
+          class="xl:w-[15%] lg:w-[18%] md:w-[24%] w-[45%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
         ></div>
       </div>
       <!-- End Multiple bars Progress -->
@@ -1769,7 +2006,7 @@
           />
           <div class="flex flex-col justify-between space-y-8">
             <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-semibold text-[#333333]">
+              <h2 class="text-sm tracki font-medium text-[#333333]">
                 Black Double Part Jacket – Palestine Arabic
               </h2>
 
@@ -1874,8 +2111,7 @@
       </h4>
       <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          class="flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-          style="width: 22%"
+          class="xl:w-[19%] lg:w-[23%] md:w-[31%] w-[60%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
         ></div>
       </div>
       <!-- End Multiple bars Progress -->
@@ -2103,7 +2339,7 @@
           />
           <div class="flex flex-col justify-between space-y-8">
             <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-semibold text-[#333333]">
+              <h2 class="text-sm tracki font-medium text-[#333333]">
                 Black Double Part Jacket – Palestine Arabic
               </h2>
 
@@ -2208,8 +2444,7 @@
       </h4>
       <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          class="flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-          style="width: 17%"
+          class="xl:w-[16%] lg:w-[19%] md:w-[25%] w-[49%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
         ></div>
       </div>
       <!-- End Multiple bars Progress -->
@@ -2576,7 +2811,8 @@
               />
             </a>
             <div class="w-1/2 ps-1">
-              <span class="self-center lg:text-2xl text-lg font-semibold whitespace-nowrap"
+              <span
+                class="self-center lg:text-2xl text-lg font-semibold whitespace-nowrap"
                 ><address class="inline">Address:</address></span
               >
               <span
@@ -2595,13 +2831,23 @@
                   <a href="#" class="hover:underline text-[#ffffff80]">Home</a>
                 </li>
                 <li>
-                  <a href="dashboard.html" class="hover:underline  text-[#ffffff80]">Dashboard</a>
+                  <a
+                    href="dashboard.html"
+                    class="hover:underline text-[#ffffff80]"
+                    >Dashboard</a
+                  >
                 </li>
                 <li>
-                  <a href="aboutus.html" class="hover:underline  text-[#ffffff80]">About Us</a>
+                  <a
+                    href="aboutus.html"
+                    class="hover:underline text-[#ffffff80]"
+                    >About Us</a
+                  >
                 </li>
                 <li>
-                  <a href="privacy.html" class="hover:underline  text-[#ffffff80]"
+                  <a
+                    href="privacy.html"
+                    class="hover:underline text-[#ffffff80]"
                     >Privacy & Policy</a
                   >
                 </li>

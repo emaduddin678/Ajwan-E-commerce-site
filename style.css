@@ -6,6 +6,6 @@ body {
 }
 
 
-.ca{
-  color: #ffffff80;
+.drawerlim > li{
+  border-bottom: 2px solid gray;
 }
