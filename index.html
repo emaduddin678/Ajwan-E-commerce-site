@@ -658,7 +658,7 @@
     <!-- drawer component -->
     <div
       id="drawer-navigation"
-      class="fixed top-0 left-0 z-40 w-64 h-screen overflow-y-auto transition-transform -translate-x-full bg-white"
+      class="fixed top-0 left-0 z-40 w-64 h-screen overflow-y-auto transition-transform -translate-x-fulla bg-white"
       tabindex="-1"
       aria-labelledby="drawer-navigation-label"
     >
@@ -732,29 +732,30 @@
             </div>
           </li>
 
-          <!-- emad  -->
+          <!-- emad clothing dropdown start -->
           <li>
             <div
-              class="border-b-2 text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full ps-4  hover:bg-gray-100"
+              class="border-b-2 text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full ps-4 hover:bg-gray-100"
             >
-              <a href="#" class="py-2 flex-auto">Clothing</a>
+              <a href="#" class="py-2 flex-auto">CLOTHING</a>
 
               <button
                 data-collapse-toggle="clothingNav"
+                onclick="rotateArrow(this)"
                 type="button"
                 aria-controls="clothingNav"
                 aria-expanded="false"
-                class="border-s-2 py-2 px-6 mx-auto h-full text-[#333333] font-semibold text-[14px]"
+                class="border-l-2 py-[13px] px-4 mx-auto h-full text-[#333333] font-semibold text-[14px]"
               >
                 <svg
-                  class="w-2 h-full ms-3a hover:rotate-90 transition duration-150 ease-out hover:ease-in"
+                  class="w-2 h-3 transition duration-150 ease-out hover:ease-in"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 6 10"
                 >
                   <path
-                    stroke="currentColor"
+                    stroke="black"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
@@ -808,30 +809,31 @@
               </ul>
             </div>
           </li>
-          <!-- emad  -->
-
+          <!-- emad clothing dropdown end -->
+          <!-- emad  winter collection dropdown start -->
           <li>
-            <div class="border-b-2">
+            <div
+              class="border-b-2 text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full ps-4 hover:bg-gray-100"
+            >
+              <a href="#" class="py-2 flex-auto">WINTER COLLECTION</a>
+
               <button
-                id="doubleDropdownButtonHoverWinterCollection"
-                data-dropdown-trigger="hover"
-                data-dropdown-toggle="doubleDropdownWinterCollection"
-                data-dropdown-placement="right-start"
-                data-dropdown-offset-distance="0"
-                data-dropdown-offset-skidding="0"
+                data-collapse-toggle="winterNav"
+                onclick="rotateArrow(this)"
                 type="button"
-                class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
+                aria-controls="winterNav"
+                aria-expanded="false"
+                class="border-l-2 py-[13px] px-4 mx-auto h-full text-[#333333] font-semibold text-[14px]"
               >
-                Winter Collection
                 <svg
-                  class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
+                  class="w-2 h-3 transition duration-150 ease-out hover:ease-in"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 6 10"
                 >
                   <path
-                    stroke="currentColor"
+                    stroke="black"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
@@ -839,95 +841,269 @@
                   />
                 </svg>
               </button>
-              <div
-                id="doubleDropdownWinterCollection"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            </div>
+            <div class="hidden w-full" id="winterNav">
+              <ul class="font-medium flex flex-col border border-gray-100">
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-1 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Jacket</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Hoodie</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Full Sleeve Jersy</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Shawl</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Waistcoat(Coaty)</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- emad  winter collection dropdown end  -->
+
+          <li>
+            <div class="border-b-2">
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
+                >COMBO OFFERS</a
               >
-                <ul
-                  class="py-2 text-sm text-gray-700"
-                  aria-labelledby="doubleDropdownButtonHoverWinterCollection"
+            </div>
+          </li>
+          <!-- emad  Attar dropdown start  -->
+          <li>
+            <div
+              class="border-b-2 text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full ps-4 hover:bg-gray-100"
+            >
+              <a href="#" class="py-2 flex-auto">ATTAR</a>
+
+              <button
+                data-collapse-toggle="attarNav"
+                onclick="rotateArrow(this)"
+                type="button"
+                aria-controls="attarNav"
+                aria-expanded="false"
+                class="border-l-2 py-[13px] px-4 mx-auto h-full text-[#333333] font-semibold text-[14px]"
+              >
+                <svg
+                  class="w-2 h-3 transition duration-150 ease-out hover:ease-in"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
                 >
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                      >Panjabi</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                      >Dawah Jersey</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                      >Polo Shirt</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                      >T-shirt</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                      >Borka</a
-                    >
-                  </li>
-                </ul>
-              </div>
+                  <path
+                    stroke="black"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden w-full" id="attarNav">
+              <ul class="font-medium flex flex-col border border-gray-100">
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-1 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Combo & Gifts</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Premium Attar</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Wholesale Attar</a
+                  >
+                </li>
+              </ul>
             </div>
           </li>
+          <!-- emad  Attar dropdown end  -->
+          <!-- emad  Dawah canvas dropdown start  -->
+          <li>
+            <div
+              class="border-b-2 text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full ps-4 hover:bg-gray-100"
+            >
+              <a href="#" class="py-2 flex-auto">DAWAH CANVAS</a>
+
+              <button
+                data-collapse-toggle="dawahNav"
+                onclick="rotateArrow(this)"
+                type="button"
+                aria-controls="dawahNav"
+                aria-expanded="false"
+                class="border-l-2 py-[13px] px-4 mx-auto h-full text-[#333333] font-semibold text-[14px]"
+              >
+                <svg
+                  class="w-2 h-3 transition duration-150 ease-out hover:ease-in"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="black"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden w-full" id="dawahNav">
+              <ul class="font-medium flex flex-col border border-gray-100">
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-1 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >A3 Size</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >A4 Size</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- emad  Dawah canvas dropdown end  -->
           <li>
             <div class="border-b-2">
               <a
                 href="#"
                 class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-                >Combo Offers</a
+                >GADGETS</a
               >
             </div>
           </li>
-          <!-- asdfs -->
+
+          <!-- emad  Others dropdown end  -->
+          <li>
+            <div
+              class="border-b-2 text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full ps-4 hover:bg-gray-100"
+            >
+              <a href="#" class="py-2 flex-auto">OTHERS</a>
+
+              <button
+                data-collapse-toggle="othersNav"
+                onclick="rotateArrow(this)"
+                type="button"
+                aria-controls="othersNav"
+                aria-expanded="false"
+                class="border-l-2 py-[13px] px-4 mx-auto h-full text-[#333333] font-semibold text-[14px]"
+              >
+                <svg
+                  class="w-2 h-3 transition duration-150 ease-out hover:ease-in"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="black"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden w-full" id="othersNav">
+              <ul class="font-medium flex flex-col border border-gray-100">
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-1 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Bag</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Kids</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Sneaker</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- emad  Others dropdown end  -->
           <li>
             <div class="border-b-2">
               <a
                 href="#"
-                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-                >Attar</a
-              >
-            </div>
-          </li>
-          <li>
-            <div class="border-b-2">
-              <a
-                href="#"
-                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-                >Dawah Canvas</a
-              >
-            </div>
-          </li>
-          <li>
-            <div class="border-b-2">
-              <a
-                href="#"
-                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-                >Gadgets</a
-              >
-            </div>
-          </li>
-          <li>
-            <div class="border-b-2">
-              <a
-                href="#"
-                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
-                >Others</a
-              >
-            </div>
-          </li>
-          <li>
-            <div class="border-b-2">
-              <a
-                href="#"
-                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
-                >LOGIN/REGISTER</a
+                class="flex items-center gap-2 blocka px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
+                ><svg
+                  class="h-5 w-5 text-[#333333]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                LOGIN/REGISTER</a
               >
             </div>
           </li>
@@ -3116,6 +3292,7 @@
 
     <!-- Footer end here  -->
 
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
 </html>
