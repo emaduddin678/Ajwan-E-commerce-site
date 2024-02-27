@@ -5,7 +5,9 @@ body {
   background: #efefef;
 }
 
-
-.drawerlim > li{
-  border-bottom: 2px solid gray;
+.drawerlim > li {
+  /* border-bottom: 1px solid #0000001c; */
+  margin: 0 !important;
+  /* color: #0000001a; */
+  color: #33333380;
 }

@@ -29,7 +29,7 @@
     <nav class="bg-white border-gray-200 xl:mb-0">
       <!-- This is start of the navbar in xl = 1280px	@media (min-width: 1280px) {display: flex, else hidden} -->
       <div
-        class="max-w-screen-xl hidden xl:flex flex-wrap items-center justify-between mx-auto py-6 px-10"
+        class="max-w-screen-xl hidden xl:flex flex-wrap items-center justify-between mx-auto py-4 px-10"
       >
         <a href="#" class="flex items-center space-x-3">
           <img
@@ -87,7 +87,7 @@
             <input
               type="text"
               id="search-navbar"
-              class="block w-full py-3 ps-10 text-lg text-gray-900 border border-gray-300 rounded-md bg-gray-50 focus:ring-[#003A3B] focus:border-[#003A3B]"
+              class="block w-full ps-10 text-lg text-gray-900 border border-gray-300 rounded-sm bg-gray-50 focus:ring-[#003A3B] focus:border-[#003A3B]"
               placeholder="Search..."
             />
           </div>
@@ -126,7 +126,7 @@
             <li class="!ml-2">
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#003A3B] md:p-0 font-bold"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#003A3B] md:p-0 font-semibold"
                 >LOGIN/REGISTER</a
               >
             </li>
@@ -166,6 +166,8 @@
       </div>
       <!-- This is end of the navbar in xl = 1280px	@media (min-width: 1280px) {display: flex, else hidden} -->
 
+      <hr />
+
       <!-- This is start of the main dropdown in xl = 1280px	@media (min-width: 1280px) {display: flex, else hidden} -->
       <div
         class="hidden max-w-screen-xl xl:flex flex-wrap items-center justify-between mx-auto px-10"
@@ -174,7 +176,7 @@
           id="dropdownHoverButton"
           data-dropdown-toggle="dropdownHover"
           data-dropdown-trigger="hover"
-          class="w-64 font-bold text-white bg-[#003A3B] focus:outline-none rounded-t-md text-lg px-5 py-2.5 text-center inline-flex items-center"
+          class="w-64 font-bold text-white bg-[#003A3B] focus:outline-none rounded-t-md text-lg px-5 py-3 text-center inline-flex items-center"
           type="button"
         >
           <svg
@@ -215,19 +217,18 @@
           id="dropdownHover"
           class="z-10 w-64 bg-white divide-y !-top-[10px] divide-gray-100 shadow block"
         >
-          asdfs
           <div>
             <a
               href="#"
-              class="block px-4 py-2 text-[#333333] font-semibold text-lg hover:bg-gray-100"
+              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
               >Home</a
             >
           </div>
           <div>
             <button
-              id="doubleDropdownButtonHover"
+              id="xlClothingBtn"
               data-dropdown-trigger="hover"
-              data-dropdown-toggle="doubleDropdown"
+              data-dropdown-toggle="xlClothingMenu"
               data-dropdown-placement="right-start"
               data-dropdown-offset-distance="0"
               data-dropdown-offset-skidding="0"
@@ -253,12 +254,12 @@
               </svg>
             </button>
             <div
-              id="doubleDropdown"
+              id="xlClothingMenu"
               class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
             >
               <ul
                 class="py-2 text-sm text-gray-700"
-                aria-labelledby="doubleDropdownButton"
+                aria-labelledby="xlClothingBtn"
               >
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
@@ -290,9 +291,9 @@
           </div>
           <div>
             <button
-              id="doubleDropdownButtonHoverWinterCollection"
+              id="xlWinterCollectionBtn"
               data-dropdown-trigger="hover"
-              data-dropdown-toggle="doubleDropdownWinterCollection"
+              data-dropdown-toggle="xlWinterCollectionMenu"
               data-dropdown-placement="right-start"
               data-dropdown-offset-distance="0"
               data-dropdown-offset-skidding="0"
@@ -317,36 +318,36 @@
               </svg>
             </button>
             <div
-              id="doubleDropdownWinterCollection"
+              id="xlWinterCollectionMenu"
               class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
             >
               <ul
                 class="py-2 text-sm text-gray-700"
-                aria-labelledby="doubleDropdownButtonHoverWinterCollection"
+                aria-labelledby="xlWinterCollectionBtn"
               >
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Panjabi</a
+                    >Jacket</a
                   >
                 </li>
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Dawah Jersey</a
+                    >Hoodie</a
                   >
                 </li>
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Polo Shirt</a
+                    >Full Sleeve Jersy</a
                   >
                 </li>
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >T-shirt</a
+                    >Shawl</a
                   >
                 </li>
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Borka</a
+                    >Waistcoat(Coaty)</a
                   >
                 </li>
               </ul>
@@ -361,18 +362,112 @@
             >
           </div>
           <div>
-            <a
-              href="#"
-              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-              >Attar</a
+            <!-- Attar  Multilevel dropdown start -->
+            <button
+              id="xlAttarBtn"
+              data-dropdown-trigger="hover"
+              data-dropdown-toggle="xlAttarMenu"
+              data-dropdown-placement="right-start"
+              data-dropdown-offset-distance="0"
+              data-dropdown-offset-skidding="0"
+              type="button"
+              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
             >
+              Attar
+              <svg
+                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+            </button>
+            <div
+              id="xlAttarMenu"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="xlAttarBtn"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Combo & Gift</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Premium Attar</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Wholesale Attar</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Attar  Multilevel dropdown end -->
           </div>
           <div>
-            <a
-              href="#"
-              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-              >Dawah Canvas</a
+            <!-- Dawah Canvas Multilevel dropdown start -->
+
+            <button
+              id="xlDawahCanvasBtn"
+              data-dropdown-trigger="hover"
+              data-dropdown-toggle="xlDawahCanvasMenu"
+              data-dropdown-placement="right-start"
+              data-dropdown-offset-distance="0"
+              data-dropdown-offset-skidding="0"
+              type="button"
+              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
             >
+              Dawah Canvas
+              <svg
+                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+            </button>
+            <div
+              id="xlDawahCanvasMenu"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="xlDawahCanvasBtn"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >A3 Size</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >A4 Size</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Dawah Canvas Multilevel dropdown start -->
           </div>
           <div>
             <a
@@ -382,11 +477,57 @@
             >
           </div>
           <div>
-            <a
-              href="#"
-              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
-              >Others</a
+            <!-- Others Multilevel dropdown start -->
+
+            <button
+              id="xlOthersBtn"
+              data-dropdown-trigger="hover"
+              data-dropdown-toggle="xlOthersMenu"
+              data-dropdown-placement="right-start"
+              data-dropdown-offset-distance="0"
+              data-dropdown-offset-skidding="0"
+              type="button"
+              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
             >
+              Others
+              <svg
+                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+            </button>
+            <div
+              id="xlOthersMenu"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="xlOthersBtn"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Bag</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Sneaker</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Others Multilevel dropdown start -->
           </div>
         </div>
         <!-- Dropdown menu end -->
@@ -525,7 +666,7 @@
         id="drawer-navigation-label"
         class="p-4 pb-0 text-base font-semibold text-gray-500 uppercase"
       >
-        Menu
+        <img src="./asstes/logo-2.png" alt="" />
       </h5>
       <button
         type="button"
@@ -548,11 +689,11 @@
         </svg>
         <span class="sr-only">Close menu</span>
       </button>
-      <div class="py-2 overflow-y-auto ">
+      <div class="py-2 overflow-y-auto">
         <ul class="space-y-2 font-medium drawerlim">
           <li>
             <!-- Search box for sidebar -->
-            <div class="relative  block w-full">
+            <div class="relative block w-full">
               <div
                 class="absolute inset-y-0 end-6 flex items-center ps-3 pointer-events-none"
               >
@@ -582,30 +723,31 @@
             </div>
           </li>
           <li>
-            <div>
+            <div class="border-b-2">
               <a
                 href="#"
-                class="block px-4 py-2 text-[#333333] font-semibold text-lg hover:bg-gray-100"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
                 >Home</a
               >
             </div>
           </li>
 
+          <!-- emad  -->
           <li>
-            <div>
+            <div
+              class="border-b-2 text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full ps-4  hover:bg-gray-100"
+            >
+              <a href="#" class="py-2 flex-auto">Clothing</a>
+
               <button
-                id="sidebarClothingBtnId"
-                data-dropdown-trigger="hover"
-                data-dropdown-toggle="sidebarClothingBtnToggle"
-                data-dropdown-placement="right-start"
-                data-dropdown-offset-distance="0"
-                data-dropdown-offset-skidding="0"
+                data-collapse-toggle="clothingNav"
                 type="button"
-                class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
+                aria-controls="clothingNav"
+                aria-expanded="false"
+                class="border-s-2 py-2 px-6 mx-auto h-full text-[#333333] font-semibold text-[14px]"
               >
-                Clothing
                 <svg
-                  class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
+                  class="w-2 h-full ms-3a hover:rotate-90 transition duration-150 ease-out hover:ease-in"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -621,10 +763,55 @@
                 </svg>
               </button>
             </div>
+            <div class="hidden w-full" id="clothingNav">
+              <ul class="font-medium flex flex-col border border-gray-100">
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-1 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Panjabi</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Dawah Jersy</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Polo Shirt</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >T-shirt</a
+                  >
+                </li>
+                <li class="border-b-[1px]">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-[#333333] transition-all text-[#33333380]"
+                    aria-current="page"
+                    >Borka</a
+                  >
+                </li>
+              </ul>
+            </div>
           </li>
+          <!-- emad  -->
 
           <li>
-            <div>
+            <div class="border-b-2">
               <button
                 id="doubleDropdownButtonHoverWinterCollection"
                 data-dropdown-trigger="hover"
@@ -690,7 +877,7 @@
             </div>
           </li>
           <li>
-            <div>
+            <div class="border-b-2">
               <a
                 href="#"
                 class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
@@ -700,7 +887,7 @@
           </li>
           <!-- asdfs -->
           <li>
-            <div>
+            <div class="border-b-2">
               <a
                 href="#"
                 class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
@@ -709,7 +896,7 @@
             </div>
           </li>
           <li>
-            <div>
+            <div class="border-b-2">
               <a
                 href="#"
                 class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
@@ -718,7 +905,7 @@
             </div>
           </li>
           <li>
-            <div>
+            <div class="border-b-2">
               <a
                 href="#"
                 class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
@@ -727,11 +914,20 @@
             </div>
           </li>
           <li>
-            <div>
+            <div class="border-b-2">
               <a
                 href="#"
                 class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
                 >Others</a
+              >
+            </div>
+          </li>
+          <li>
+            <div class="border-b-2">
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
+                >LOGIN/REGISTER</a
               >
             </div>
           </li>
