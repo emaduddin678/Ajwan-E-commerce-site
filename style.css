@@ -15,3 +15,8 @@ body {
 .drawerBtn{
   background-color: #0F0000 !important;
 }
+
+.activeNav{
+  border-color: #DBA203;
+  color: #333333 !important;
+}
