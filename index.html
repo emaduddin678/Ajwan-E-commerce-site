@@ -658,7 +658,7 @@
     <!-- drawer component -->
     <div
       id="drawer-navigation"
-      class="fixed top-0 left-0 z-40 w-64 h-screen overflow-y-auto transition-transform -translate-x-fulla bg-white"
+      class="fixed top-0 left-0 z-40 w-64 h-screen overflow-y-auto transition-transform -translate-x-full bg-white"
       tabindex="-1"
       aria-labelledby="drawer-navigation-label"
     >
@@ -1163,11 +1163,18 @@
         <div
           class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 mx-auto p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
         >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
+          <div class="relative">
+            <img
+              src="./asstes/blackhodie.png"
+              alt=""
+              class="m-auto w-full object-cover object-center rounded-t-md"
+            />
+
+            <!-- This is the both label use this conditionally  -->
+            <span class="absolute top-3 text-[10px] font-semibold text-[#FCFCFC] px-4 text-center bg-[#003A3B]">-15%</span>
+            <span class="absolute top-9 text-[10px] font-semibold text-[#FCFCFC] px-4 text-center bg-[#DD3333]">SOLD<br>OUT</span>
+            <!-- This is the both label use this conditionally  -->
+          </div>
           <div class="flex flex-col justify-between space-y-8">
             <div class="space-y-2 mt-2 text-center">
               <h2 class="text-sm tracki font-medium text-[#333333]">
