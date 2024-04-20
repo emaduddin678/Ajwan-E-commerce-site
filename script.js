@@ -15,10 +15,24 @@ const rotateArrow = (button) => {
 
 const activeNav = (button) => {
   const a = Object.values(button.classList);
-  console.log(a.includes("activeNav"))
-  if(a.includes("activeNav")){
-    button.classList.remove("activeNav")
-  }else{
-    button.classList.add("activeNav")
+  console.log(a.includes("activeNav"));
+  if (a.includes("activeNav")) {
+    button.classList.remove("activeNav");
+  } else {
+    button.classList.add("activeNav");
   }
+};
+
+let navbar = document.getElementById("navid");
+var scrollPrev = window.pageYOffset;
+window.onscroll = function () {
+  var scrollCur = window.pageYOffset;
+  if (scrollPrev > scrollCur) {
+    navbar.style.top = "0";
+  } else {
+    
+    navbar.style.top = window.innerWidth > 990 ?  "-90px" : "-70px";
+
+  }
+  scrollPrev = scrollCur;
 };

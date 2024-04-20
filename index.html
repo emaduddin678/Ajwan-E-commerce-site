@@ -9,7 +9,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./asstes/brandlogotop.jpeg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./asstes/brandlogotop.jpeg"
+      type="image/x-icon"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -27,629 +31,118 @@
   </head>
   <body>
     <!-- navbar starts here  -->
-    <nav class="bg-white border-gray-200 xl:mb-0">
-      <!-- This is start of the navbar in xl = 1280px	@media (min-width: 1280px) {display: flex, else hidden} -->
+
+    <!-- This is start of the navbar for lg	1024px	@media (min-width: 1024px) { ... } -->
+    <nav
+      id="navid"
+      class="bg-[#F7F7F7] block fixed w-full z-20 top-0 start-0 end-0"
+    >
       <div
-        class="max-w-screen-xl hidden xl:flex flex-wrap items-center justify-between mx-auto py-4 px-10"
+        class="max-w-screen-xl flex items-center justify-between mx-auto lg:p-4 px-5"
       >
-        <a href="#" class="flex items-center space-x-3">
-          <img
-            src="./asstes/logo-2.png"
-            class="max-w-[280px]"
-            alt="Ajwan Logo"
-          />
-        </a>
-        <div class="flex flex-1 mx-4">
-          <button
-            type="button"
-            data-collapse-toggle="navbar-search"
-            aria-controls="navbar-search"
-            aria-expanded="false"
-            class="md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 me-1"
-          >
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-            <span class="sr-only">Search</span>
-          </button>
-          <div class="relative hidden md:block w-full">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-            >
-              <svg
-                class="w-4 h-4 text-gray-500"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                />
-              </svg>
-              <span class="sr-only">Search icon</span>
-            </div>
-            <input
-              type="text"
-              id="search-navbar"
-              class="block w-full ps-10 text-lg text-gray-900 border border-gray-300 rounded-sm bg-gray-50 focus:ring-[#003A3B] focus:border-[#003A3B]"
-              placeholder="Search..."
-            />
-          </div>
-          <button
-            data-collapse-toggle="navbar-search"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 -700"
-            aria-controls="navbar-search"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-        </div>
         <div
-          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-search"
+          data-drawer-target="drawer-navigation"
+          data-drawer-show="drawer-navigation"
+          aria-controls="drawer-navigation"
+          class="navbar_collapse_btn cursor-pointer"
         >
-          <ul
-            class="flex items-center flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
-          >
-            <li class="!ml-2">
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#003A3B] md:p-0 font-semibold"
-                >LOGIN/REGISTER</a
-              >
-            </li>
-            <li class="!ml-2">
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#003A3B] md:p-0"
-                ><button
-                  class="py-4 px-1 relative border-2 border-transparent text-gray-800 rounded-full hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
-                  aria-label="Cart"
-                >
-                  <svg
-                    class="h-6 w-6"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    ></path>
-                  </svg>
-                  <span class="absolute inset-0 object-right-top -mr-5 mt-0.5">
-                    <div
-                      class="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-semibold leading-4 bg-[#0F0000] text-white"
-                    >
-                      0
-                    </div>
-                  </span>
-                </button></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- This is end of the navbar in xl = 1280px	@media (min-width: 1280px) {display: flex, else hidden} -->
-
-      <hr />
-
-      <!-- This is start of the main dropdown in xl = 1280px	@media (min-width: 1280px) {display: flex, else hidden} -->
-      <div
-        class="hidden max-w-screen-xl xl:flex flex-wrap items-center justify-between mx-auto px-10"
-      >
-        <button
-          id="dropdownHoverButton"
-          data-dropdown-toggle="dropdownHover"
-          data-dropdown-trigger="hover"
-          class="w-64 font-bold text-white bg-[#003A3B] focus:outline-none rounded-t-md text-lg px-5 py-3 text-center inline-flex items-center"
-          type="button"
-        >
+          <!-- bg-rose-900 -->
           <svg
-            class="w-4 h-4 text-white mr-2"
+            class="w-5 h-5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
+            stroke="#333333"
             viewBox="0 0 17 14"
           >
             <path
-              stroke="currentColor"
+              stroke="#333333"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
-          Browse Categories
+        </div>
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="./asstes/brandlogo.jpeg"
+            class="w-96 mx-auto inline"
+            alt="Ajwan Logo"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#003A3B] md:p-0"
+          ><button
+            class="py-4 px-1 relative border-2 border-transparent text-gray-800 rounded-full hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
+            aria-label="Cart"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              ></path>
+            </svg>
+            <span class="absolute inset-0 object-right-top -mr-5 mt-0.5">
+              <div
+                class="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-semibold leading-4 bg-[#0F0000] text-white"
+              >
+                0
+              </div>
+            </span>
+          </button></a
+        >
+      </div>
+
+      <!-- Search box for all device except xl= 1280 -->
+      <div class="lg:py-2 pb-2 pt-1 px-0 block w-full">
+        <div class="relative right-0 inset-y-0 end-6 flex items-center px-5">
           <svg
-            class="w-2.5 h-2.5 ms-auto"
+            class="w-4 h-4 text-gray-500 absolute right-8"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 10 6"
+            viewBox="0 0 20 20"
           >
             <path
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="m1 1 4 4 4-4"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
             />
           </svg>
-        </button>
+          <span class="sr-only">Search icon</span>
 
-        <!-- Dropdown menu start -->
-        <div
-          id="dropdownHover"
-          class="z-10 w-64 bg-white divide-y !-top-[10px] divide-gray-100 shadow block"
-        >
-          <div>
-            <a
-              href="#"
-              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100"
-              >Home</a
-            >
-          </div>
-          <div>
-            <button
-              id="xlClothingBtn"
-              data-dropdown-trigger="hover"
-              data-dropdown-toggle="xlClothingMenu"
-              data-dropdown-placement="right-start"
-              data-dropdown-offset-distance="0"
-              data-dropdown-offset-skidding="0"
-              data-drop
-              type="button"
-              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
-            >
-              Clothing
-              <svg
-                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 9 4-4-4-4"
-                />
-              </svg>
-            </button>
-            <div
-              id="xlClothingMenu"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-            >
-              <ul
-                class="py-2 text-sm text-gray-700"
-                aria-labelledby="xlClothingBtn"
-              >
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Panjabi</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Dawah Jersey</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Polo Shirt</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >T-shirt</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Borka</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <button
-              id="xlWinterCollectionBtn"
-              data-dropdown-trigger="hover"
-              data-dropdown-toggle="xlWinterCollectionMenu"
-              data-dropdown-placement="right-start"
-              data-dropdown-offset-distance="0"
-              data-dropdown-offset-skidding="0"
-              type="button"
-              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
-            >
-              Winter Collection
-              <svg
-                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 9 4-4-4-4"
-                />
-              </svg>
-            </button>
-            <div
-              id="xlWinterCollectionMenu"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-            >
-              <ul
-                class="py-2 text-sm text-gray-700"
-                aria-labelledby="xlWinterCollectionBtn"
-              >
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Jacket</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Hoodie</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Full Sleeve Jersey</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Shawl</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Waistcoat(Coaty)</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-              >Combo Offers</a
-            >
-          </div>
-          <div>
-            <!-- Attar  Multilevel dropdown start -->
-            <button
-              id="xlAttarBtn"
-              data-dropdown-trigger="hover"
-              data-dropdown-toggle="xlAttarMenu"
-              data-dropdown-placement="right-start"
-              data-dropdown-offset-distance="0"
-              data-dropdown-offset-skidding="0"
-              type="button"
-              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
-            >
-              Attar
-              <svg
-                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 9 4-4-4-4"
-                />
-              </svg>
-            </button>
-            <div
-              id="xlAttarMenu"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-            >
-              <ul
-                class="py-2 text-sm text-gray-700"
-                aria-labelledby="xlAttarBtn"
-              >
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Combo & Gift</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Premium Attar</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Wholesale Attar</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <!-- Attar  Multilevel dropdown end -->
-          </div>
-          <div>
-            <!-- Dawah Canvas Multilevel dropdown start -->
-
-            <button
-              id="xlDawahCanvasBtn"
-              data-dropdown-trigger="hover"
-              data-dropdown-toggle="xlDawahCanvasMenu"
-              data-dropdown-placement="right-start"
-              data-dropdown-offset-distance="0"
-              data-dropdown-offset-skidding="0"
-              type="button"
-              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
-            >
-              Dawah Canvas
-              <svg
-                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 9 4-4-4-4"
-                />
-              </svg>
-            </button>
-            <div
-              id="xlDawahCanvasMenu"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-            >
-              <ul
-                class="py-2 text-sm text-gray-700"
-                aria-labelledby="xlDawahCanvasBtn"
-              >
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >A3 Size</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >A4 Size</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <!-- Dawah Canvas Multilevel dropdown start -->
-          </div>
-          <div>
-            <a
-              href="#"
-              class="block px-4 py-2 text-[#333333] font-semibold text-[14px] hover:bg-gray-100 -600"
-              >Gadgets</a
-            >
-          </div>
-          <div>
-            <!-- Others Multilevel dropdown start -->
-
-            <button
-              id="xlOthersBtn"
-              data-dropdown-trigger="hover"
-              data-dropdown-toggle="xlOthersMenu"
-              data-dropdown-placement="right-start"
-              data-dropdown-offset-distance="0"
-              data-dropdown-offset-skidding="0"
-              type="button"
-              class="text-[#333333] font-semibold text-[14px] flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
-            >
-              Others
-              <svg
-                class="w-2.5 h-2.5 ms-3 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 9 4-4-4-4"
-                />
-              </svg>
-            </button>
-            <div
-              id="xlOthersMenu"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-            >
-              <ul
-                class="py-2 text-sm text-gray-700"
-                aria-labelledby="xlOthersBtn"
-              >
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Bag</a>
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kids</a>
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Sneaker</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <!-- Others Multilevel dropdown start -->
-          </div>
-        </div>
-        <!-- Dropdown menu end -->
-
-        <!-- right side of dropdownHover -->
-        <div class="ms-5 flex-1 font-semibold text-[#0F0F0F]">Home</div>
-      </div>
-      <!-- This is end the main dropdown in xl = 1280px	@media (min-width: 1280px) {display: flex, else hidden} -->
-
-      <!-- This is start of the navbar for lg	1024px	@media (min-width: 1024px) { ... } -->
-      <nav
-        class="bg-[#F7F7F7] xl:hidden block fixed w-full z-20 top-0 start-0 end-0"
-      >
-        <div
-          class="max-w-screen-xl flex items-center justify-between mx-auto lg:p-4 px-2"
-        >
-          <div
-            data-drawer-target="drawer-navigation"
-            data-drawer-show="drawer-navigation"
-            aria-controls="drawer-navigation"
-            class="navbar_collapse_btn cursor-pointer"
-          >
-            <!-- bg-rose-900 -->
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="#333333"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="#333333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </div>
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img
-              src="./asstes/brandlogo.jpeg"
-              class="w-96 mx-auto inline"
-              alt="Ajwan Logo"
-            />
-          </a>
-
-          <a
-            href="#"
-            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#003A3B] md:p-0"
-            ><button
-              class="py-4 px-1 relative border-2 border-transparent text-gray-800 rounded-full hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
-              aria-label="Cart"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                ></path>
-              </svg>
-              <span class="absolute inset-0 object-right-top -mr-5 mt-0.5">
-                <div
-                  class="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-semibold leading-4 bg-[#0F0000] text-white"
-                >
-                  0
-                </div>
-              </span>
-            </button></a
-          >
-        </div>
-
-        <!-- Search box for all device except xl= 1280 -->
-        <div class="relative lg:py-2 py-1 px-4 block w-full">
-          <div
-            class="absolute inset-y-0 end-6 flex items-center ps-3 pointer-events-none"
-          >
-            <svg
-              class="w-4 h-4 text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-            <span class="sr-only">Search icon</span>
-          </div>
           <input
             type="text"
             id="search-navbar"
-            class="block w-full p-2 ps-4 text-sm text-gray-900 focus:border-gray-300 border border-gray-300 rounded-md bg-gray-50 focus:ring-gray-300"
+            class="w-full p-2 ps-4 text-sm text-gray-900 focus:border-gray-300 border border-gray-300 rounded-md bg-gray-50 focus:ring-gray-300"
             placeholder="Search..."
           />
         </div>
-      </nav>
-      <!-- This is end of the navbar for lg	1024px	@media (min-width: 1024px) { ... } -->
-
-      <!-- main navbar is  bottom -->
+      </div>
     </nav>
+    <!-- This is end of the navbar for lg	1024px	@media (min-width: 1024px) { ... } -->
+
+    <!-- main navbar is  bottom -->
+
     <!-- navbar end here  -->
 
     <!-- Banner section start here  -->
     <div
-      class="xl:px-[120px] md:px-12 px-4 lg:pt-[155px] md:pt-[115px] xl:pt-0 pt-[140px] flex gap-5"
+      class="mt-4 xl:px-[120px] md:px-12 px-4 lg:pt-[155px] md:pt-[115px] xl:pt-0 pt-[140px]"
     >
-      <div class="hidden xl:block flex-[1]"></div>
-      <div class="me-auto flex-[3.6]">
+      <div class="me-auto">
         <img class="mx-auto" src="./asstes/banner.png" alt="" />
       </div>
     </div>
@@ -717,7 +210,7 @@
               </div>
               <input
                 type="text"
-                id="search-navbar"
+                id="search-navbar2"
                 class="block w-full p-2 ps-4 text-sm text-gray-900 focus:border-gray-300 border border-gray-300 rounded-sm bg-gray-50 focus:ring-gray-300"
                 placeholder="Search..."
               />
@@ -1114,7 +607,7 @@
     <!-- sidebar end  -->
 
     <!-- icon and name only for small device start  -->
-    <section class="px-4 mt-6 md:hidden">
+    <section class="px-40 pt-16 mt-6">
       <div class="icon_container flex gap-y-4 flex-wrap justify-between">
         <!-- single icon box start  -->
         <article class="group px-3 border-[1px] border-[#777777]">
@@ -1241,32 +734,7 @@
     <!-- icon and name only for small device end  -->
 
     <!-- New Top Winter Collection section  start -->
-    <section class="xl:pt-20 xl:px-28 xl:mt-2 mt-20">
-      <!-- short navbar for filtering -->
-      <nav class="flex space-x-6 xl:justify-start justify-center">
-        <a
-          class="activeNav py-1 hover:transition-all hover:underline:ease-in-out px-1 inline-flex items-center gap-2 border-b-2 hover:border-[#DBA203] text-sm whitespace-nowrap text-[#333333B3] font-semibold hover:text-[#333333] focus:outline-none focus:text-[#333333]"
-          href="#"
-        >
-          <!-- when this link is active top_collection_carts & Winter_Offer_carts will hidden -->
-          NEW
-        </a>
-        <a
-          class="py-1 hover:transition-all hover:underline:ease-in-out px-1 inline-flex items-center gap-2 border-b-2 hover:border-[#DBA203] text-sm whitespace-nowrap text-[#333333B3] font-semibold hover:text-[#333333] focus:outline-none focus:text-[#333333]"
-          href="#"
-        >
-          TOP
-        </a>
-        <a
-          class="py-1 hover:transition-all hover:underline:ease-in-out px-1 inline-flex items-center gap-2 border-b-2 hover:border-[#DBA203] text-sm whitespace-nowrap text-[#333333B3] font-semibold hover:text-[#333333] focus:outline-none focus:text-[#333333]"
-          href="#"
-          >🔥WINTER OFFER
-        </a>
-      </nav>
-      <!-- short navbar for filtering -->
-      <div class="top_collection_carts"></div>
-      <div class="winter-offer_collection_carts"></div>
-    </section>
+
     <!--New Top Winter Collection section  end -->
 
     <!-- Winter Sales Section start -->
@@ -2282,672 +1750,7 @@
       <!-- Attar cards end here  -->
     </section>
     <!-- Attar Section end -->
-    <!-- Dawah Jersey Section start -->
-    <section class="pt-20 xl:px-28 px-4 asdf">
-      <!-- Multiple bars Progress -->
-      <h4 class="text-2xl text-center font-bold text-[#242424] mx-auto">
-        DAWAH JERSEY
-      </h4>
-      <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
-        <div
-          class="xl:w-[15%] lg:w-[18%] md:w-[24%] w-[45%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-        ></div>
-      </div>
-      <!-- End Multiple bars Progress -->
 
-      <!-- dawah cards start here  -->
-      <div
-        class="all_cards mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 justify-between"
-      >
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-      </div>
-      <!-- dawah cards end here  -->
-    </section>
-    <!-- dawah jersey Section end -->
-    <!-- exclusive panjabi Section start -->
-    <section class="pt-20 xl:px-28 px-4 asdf">
-      <!-- Multiple bars Progress -->
-      <h4 class="text-2xl text-center font-bold text-[#242424] mx-auto">
-        EXCLUSIVE PANJABI
-      </h4>
-      <div class="flex w-full h-0.5 bg-gray-200 rounded-full overflow-hidden">
-        <div
-          class="xl:w-[19%] lg:w-[23%] md:w-[31%] w-[60%] flex mx-auto flex-col justify-center overflow-hidden bg-[#0F0000]"
-        ></div>
-      </div>
-      <!-- End Multiple bars Progress -->
-
-      <!-- exclusive panjabi cards start here  -->
-      <div
-        class="all_cards mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 justify-between"
-      >
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-        <!-- single start    -->
-        <div
-          class="xl:max-w-48 lg:max-w-60 md:max-w-80 max-w-44 p-3 rounded-md shadow-md bg-[#F7F7F7] text-[#333333]"
-        >
-          <img
-            src="./asstes/blackhodie.png"
-            alt=""
-            class="m-auto w-full object-cover object-center rounded-t-md"
-          />
-          <div class="flex flex-col justify-between space-y-8">
-            <div class="space-y-2 mt-2 text-center">
-              <h2 class="text-sm tracki font-medium text-[#333333]">
-                Black Double Part Jacket – Palestine Arabic
-              </h2>
-
-              <p class="text-xs">
-                <del class="text-[#BBBBBB] text-xs">$1200</del
-                ><span class="text-[#333333] ml-2 font-semibold text-sm"
-                  >$400</span
-                >
-              </p>
-            </div>
-            <button
-              class="bg-[#003A3B] text-xs text-white group relative inline-block overflow-hidden font-semibold p-3 focus:outline-none focus:ring"
-              type="button"
-            >
-              <span
-                class="absolute flex justify-center items-center inset-x-0 group-hover:bottom-0 -bottom-4 h-[2px] bg-[#0F0000] transition-all group-hover:h-full"
-                ><svg
-                  class="h-8 w-8 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </span>
-
-              <span
-                class="text-sm font-semibold group-hover:text-white group-hover:bottom-4 inset-0 inset-x-0 bottom-0 h-[2px] transition-all"
-              >
-                SELECT OPTIONS
-              </span>
-            </button>
-          </div>
-        </div>
-        <!-- single end    -->
-      </div>
-      <!-- exclusive panjabi cards end here  -->
-    </section>
-    <!-- exclusive panjabi Section end -->
     <!-- Borka & niqab Section start -->
     <section class="pt-20 xl:px-28 px-4 asdf">
       <!-- Multiple bars Progress -->
